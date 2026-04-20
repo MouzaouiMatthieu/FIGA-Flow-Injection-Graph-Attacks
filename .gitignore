@@ -1,0 +1,45 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test / type checking caches
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Caches
+.cache/
+cache/
+# DGL and related caches
+dgl_cache/
+
+# Model checkpoints / weights
+*.pt
+*.pth
+checkpoints/
+*.csv
+
+# Logs and results
+logs/
+results/
+results_exploration/
+rf_cic_output/
+figs/
+figures/
+figs*/
+
+# Temp / misc
+*.log
+*.tmp
+
+# .github folder
+.github/
+
+
+
+# .sh script for jobs in generated_scripts/
+*/generated_scripts/*
+generated_scripts
