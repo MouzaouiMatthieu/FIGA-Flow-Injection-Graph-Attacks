@@ -65,3 +65,6 @@ python main.py \
    - `results/evasion/run_summary.json`
    - `results/evasion/*_metrics.json`
 
+# Technical Report
+
+The technical report (proofs of Theorem 1, Corrolary 1 and Proposition 1) can be found in `report/technical_report.pdf`.
