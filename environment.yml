@@ -1,0 +1,26 @@
+name: ADV_ATK_GNN_SURR
+channels:
+  - pytorch
+  - dglteam/label/th24_cu121
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.6
+  - pytorch=2.4.0
+  - pytorch-cuda=12.1
+  - dgl=2.4.0.th24.cu121
+  - torch-geometric=2.7.0
+  - numpy=2.4.2
+  - scikit-learn=1.8.0
+  - pandas=2.3.3
+  - matplotlib=3.9.1
+  - seaborn=0.13.2
+  - tqdm=4.67.3
+  - pyyaml=6.0.3
+  - requests=2.32.5
+  - networkx=3.6.1
+  - pip
+  - pip:
+      - ipykernel
+      - pytest

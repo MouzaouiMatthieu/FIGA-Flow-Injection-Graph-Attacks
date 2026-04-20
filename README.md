@@ -9,18 +9,24 @@ This repository contains a reduced implementation for heterogeneous-graph evasio
 
 ## Setup
 
-1. Create and activate a Python environment.
-2. Install dependencies:
+This project is developed for Python `3.11.6`.
+
+### Recommended (conda)
+
+```bash
+conda env create -f environment.yml
+conda activate ADV_ATK_GNN_SURR
+python --version
+```
+
+### Alternative (pip)
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
-
-3. Place dataset files under `data/raw`
-
 
 ## Run Evasion Experiments
 
@@ -28,13 +34,13 @@ pip install -r requirements.txt
 
 ```bash
 python main.py \
-  --dataset CICIDS2017-Undersampled \
+  --dataset CICIDS2017 \
   --attack targeted_evasion \
   --target_model SAGE \
   --target_model_path /path/to/victim_model.pt \
-  --surrogate_models SAGE GCN gat_skip \
-  --surrogate_model_paths /path/to/surr_sage.pt /path/to/surr_gcn.pt /path/to/surr_gat_skip.pt \
-  --budget 20 \
+  --surrogate_models GCN \
+  --surrogate_model_paths /path/to/surr_sage.pt \
+  --budget 100 \
   --output_dir results/evasion
 ```
 
@@ -46,7 +52,7 @@ python main.py \
   --attack random_evasion \
   --target_model GCN \
   --target_model_path /path/to/victim_model.pt \
-  --budget 20 \
+  --budget 100 \
   --output_dir results/evasion
 ```
 
